@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+using AuditSeverityModule.Models;
+using AuditSeverityModule.Providers;
+using AuditSeverityModule.Repository;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+
+namespace AuditSeverityModule.Controllers
+{
+    
+    [Route("api/[controller]")]
+    [ApiController]
+    public class AuditSeverityController : ControllerBase
+    {
+        private readonly SeverityProvider obj;
+        public AuditSeverityController(SeverityProvider _obj)
+        {
+            obj = _obj;
+        }
+        readonly log4net.ILog _log4net = log4net.LogManager.GetLogger(typeof(AuditSeverityController));
+        
+
+        
+        [HttpGet]
+        public AuditRequest Get()
+        {
+            AuditRequest req = new AuditRequest();
+            req.ProjectName = "Test";
+            req.ProjectManagerName = "Sujoy B";
+            req.ApplicationOwnerName = "Basak";
+            AuditDetail ad = new AuditDetail();
+            ad.Type = "Internal";
+            //ad.Date = new DateTime(01, 01, 2020);
+            Questions q = new Questions();
+
+            q.Question1 = true;
+            q.Question2 = true;
+            q.Question3 = true;
+            q.Question4 = true;
+            q.Question5 = true;
+            ad.questions = q;
+            req.Auditdetails = ad;            
+
+            return req;
+        }
+
+        // POST: api/AuditSeverity
+        [HttpPost]
+        public IActionResult Post([FromBody]AuditRequest req)    //Change Here
+        {
+            _log4net.Info(" Http POST request from AuditSeverity");
+            if (req == null)
+                return BadRequest();
+            try
+            {
+                //SeverityProvider obj = new SeverityProvider();
+
+                var response = obj.SeverityResponse(req);
+                if (response == null)
+                    return BadRequest("You must have missed some data");
+
+
+                return Ok(response);
+            }
+            catch(Exception e)
+            {
+                _log4net.Error("Exception Occured "+e.Message);
+                return StatusCode(500);
+            }
+            
+        }
+        
+    }
+}
