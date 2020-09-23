@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AuditSeverityModule.Repository
 {
-    public interface ISeverity
+    public interface ISeverityRepo
     {
         public List<AuditBenchmark> Response();
     }

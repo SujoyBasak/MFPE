@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using AuditSeverityModule.Models;
 using AuditSeverityModule.Providers;
 using AuditSeverityModule.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -16,6 +17,7 @@ namespace AuditSeverityModule.Controllers
     
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize]
     public class AuditSeverityController : ControllerBase
     {
         private readonly SeverityProvider obj;
@@ -24,31 +26,7 @@ namespace AuditSeverityModule.Controllers
             obj = _obj;
         }
         readonly log4net.ILog _log4net = log4net.LogManager.GetLogger(typeof(AuditSeverityController));
-        
 
-        
-        [HttpGet]
-        public AuditRequest Get()
-        {
-            AuditRequest req = new AuditRequest();
-            req.ProjectName = "Test";
-            req.ProjectManagerName = "Sujoy B";
-            req.ApplicationOwnerName = "Basak";
-            AuditDetail ad = new AuditDetail();
-            ad.Type = "Internal";
-            //ad.Date = new DateTime(01, 01, 2020);
-            Questions q = new Questions();
-
-            q.Question1 = true;
-            q.Question2 = true;
-            q.Question3 = true;
-            q.Question4 = true;
-            q.Question5 = true;
-            ad.questions = q;
-            req.Auditdetails = ad;            
-
-            return req;
-        }
 
         // POST: api/AuditSeverity
         [HttpPost]

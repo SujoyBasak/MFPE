@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AuditChecklistModule.Repository
 {
-    public class Checklist : IChecklist
+    public class ChecklistRepo : IChecklistRepo
     {
         private static List<Questions> InternalQuestionsList = new List<Questions>()
         {
@@ -70,13 +70,16 @@ namespace AuditChecklistModule.Repository
 
         public List<Questions> GetQuestions(string auditType)
         {
+            List<Questions> ls = new List<Questions>();
 
             if (auditType == "Internal")
-                return InternalQuestionsList;
-            else if(auditType =="SOX")
-                return SOXQuestionsList;
+                ls = InternalQuestionsList;
+            else if (auditType == "SOX")
+                ls = SOXQuestionsList;
+            else
+                return null;
             
-              return null;
+              return ls;
 
             
         }

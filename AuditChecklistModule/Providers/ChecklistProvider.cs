@@ -9,8 +9,8 @@ namespace AuditChecklistModule.Providers
 {
     public class ChecklistProvider
     {
-        private readonly IChecklist obj;
-        public ChecklistProvider(IChecklist _obj)
+        private readonly IChecklistRepo obj;
+        public ChecklistProvider(IChecklistRepo _obj)
         {
             obj = _obj;
         }
@@ -28,11 +28,7 @@ namespace AuditChecklistModule.Providers
             try
             {
                 var list = obj.GetQuestions(type);
-
-                if (list != null)
-                    return list;
-                else
-                    return null;
+                return list;
             }
             catch(Exception)
             {

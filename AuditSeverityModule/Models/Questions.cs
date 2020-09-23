@@ -8,11 +8,7 @@ namespace AuditSeverityModule.Models
 {
     public class Questions
     {
-        //[Key]
-        //public int QuestionNo { get; set; }
-        //public string Question { get; set; }
-        //public bool Answer { get; set; }
-
+       
         public bool Question1 { get; set; }
         public bool Question2 { get; set; }
         public bool Question3 { get; set; }

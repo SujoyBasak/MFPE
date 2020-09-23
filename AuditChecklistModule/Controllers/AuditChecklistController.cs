@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AuditChecklistModule.Models;
 using AuditChecklistModule.Providers;
 using AuditChecklistModule.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +13,7 @@ namespace AuditChecklistModule.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize]
     public class AuditChecklistController : ControllerBase
     {
         private readonly ChecklistProvider obj;
@@ -27,13 +29,11 @@ namespace AuditChecklistModule.Controllers
         [HttpGet("{auditType}")]
         public IActionResult Get(string auditType)
         {
-            _log4net.Info(" AuditChecklistController Http GET request called");
+            _log4net.Info("AuditChecklistController Http GET request called");
             if (string.IsNullOrEmpty(auditType))
                 return BadRequest("No Input");
             try
             {
-                //ChecklistProvider obj = new ChecklistProvider();
-
                 var list = obj.QuestionsProvider(auditType);
 
                 if (list != null)
@@ -41,15 +41,11 @@ namespace AuditChecklistModule.Controllers
                 else
                     return BadRequest("Wrong Input");
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                _log4net.Info("Exception from AuditChecklist");
+                _log4net.Error("Exception from AuditChecklist" +e.Message);
                 return StatusCode(500);
             }
-            
-            
-
-            
         }        
     }
 }

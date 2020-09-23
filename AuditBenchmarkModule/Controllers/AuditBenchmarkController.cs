@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using AuditBenchmarkModule.Models;
 using AuditBenchmarkModule.Providers;
 using AuditBenchmarkModule.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuditBenchmarkModule.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize]
     public class AuditBenchmarkController : ControllerBase   //Port 44386
     {
         private readonly log4net.ILog _log4net;

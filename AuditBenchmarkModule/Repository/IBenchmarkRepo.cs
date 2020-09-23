@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AuditBenchmarkModule.Repository
 {
-    public interface IBenchmark
+    public interface IBenchmarkRepo
     {
         public List<AuditBenchmark> GetNolist();
     }

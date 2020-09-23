@@ -18,6 +18,12 @@ namespace AuthorizationService.Provider
         {
             obj = _obj;
         }
+        /// <summary>
+        /// This method is responsible for generating token as per the userinfo given by the authenticate method.
+        /// </summary>
+        /// <param name="userInfo"></param>
+        /// <param name="_config"></param>
+        /// <returns></returns>
         public string GenerateJSONWebToken(Authenticate userInfo,IConfiguration _config)
         {
             if (userInfo == null)
@@ -42,7 +48,11 @@ namespace AuthorizationService.Provider
             }
             
         }
-        
+        /// <summary>
+        /// This method is used to authenticate user if the user credentials exist int the database and it will return the same.
+        /// </summary>
+        /// <param name="login"></param>
+        /// <returns></returns>
 
         public dynamic AuthenticateUser(Authenticate login)
         {
@@ -65,6 +75,7 @@ namespace AuthorizationService.Provider
                     if (ValidUsersDictionary.Any(u => u.Key == login.Name && u.Value == login.Password))
                     {
                         user = new Authenticate { Name = login.Name, Password = login.Password };
+
                     }
                 }               
 

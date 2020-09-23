@@ -9,9 +9,9 @@ namespace AuditBenchmarkModule.Providers
 {
     public class BenchmarkProvider
     {
-        private readonly IBenchmark obj;
+        private readonly IBenchmarkRepo obj;
 
-        public BenchmarkProvider(IBenchmark _obj)
+        public BenchmarkProvider(IBenchmarkRepo _obj)
         {
             obj = _obj;
         }        

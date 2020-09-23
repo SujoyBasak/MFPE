@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AuditBenchmarkModule.Repository
 {
-    public class BenchmarkRepo : IBenchmark
+    public class BenchmarkRepo : IBenchmarkRepo
     {
         private static List<AuditBenchmark> AuditBenchmarkList = new List<AuditBenchmark>()
         {
@@ -24,9 +24,11 @@ namespace AuditBenchmarkModule.Repository
         };
         public List<AuditBenchmark> GetNolist() 
         {
+            List<AuditBenchmark> ls = new List<AuditBenchmark>();
             try
             {
-                return AuditBenchmarkList;
+                ls= AuditBenchmarkList;
+                return ls;
             }
             catch(Exception)
             {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AuditChecklistModule.Repository
 {
-    public interface IChecklist
+    public interface IChecklistRepo
     {
         public List<Questions> GetQuestions(string auditType);        
     }

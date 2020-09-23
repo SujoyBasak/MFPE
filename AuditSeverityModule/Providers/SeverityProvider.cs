@@ -9,8 +9,8 @@ namespace AuditSeverityModule.Providers
 {
     public class SeverityProvider
     {
-        ISeverity obj;
-        public SeverityProvider(ISeverity _obj)
+        ISeverityRepo obj;
+        public SeverityProvider(ISeverityRepo _obj)
         {
             obj = _obj;
         }

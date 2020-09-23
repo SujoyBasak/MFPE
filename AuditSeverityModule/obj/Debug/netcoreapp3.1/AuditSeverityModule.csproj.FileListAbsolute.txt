@@ -34,6 +34,13 @@ C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule\bin\Deb
 C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
 C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule\obj\Debug\netcoreapp3.1\AuditSeverityModule.csproj.CoreCompileInputs.cache
 C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule\obj\Debug\netcoreapp3.1\AuditSeverityModule.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule\obj\Debug\netcoreapp3.1\AuditSeverityModule.MvcApplicationPartsAssemblyInfo.cache

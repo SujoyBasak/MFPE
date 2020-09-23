@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace AuditSeverityModule.Repository
 {
-    public class Severity : ISeverity
+    public class SeverityRepo : ISeverityRepo
     {
         Uri baseAddress = new Uri("https://localhost:44386/api");   //Port No.
         HttpClient client;
 
-        public Severity()
+        public SeverityRepo()
         {
             client = new HttpClient();
             client.BaseAddress = baseAddress;
