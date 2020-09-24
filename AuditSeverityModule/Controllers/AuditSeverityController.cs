@@ -20,8 +20,8 @@ namespace AuditSeverityModule.Controllers
     //[Authorize]
     public class AuditSeverityController : ControllerBase
     {
-        private readonly SeverityProvider obj;
-        public AuditSeverityController(SeverityProvider _obj)
+        private readonly ISeverityProvider obj;
+        public AuditSeverityController(ISeverityProvider _obj)
         {
             obj = _obj;
         }
@@ -37,13 +37,9 @@ namespace AuditSeverityModule.Controllers
                 return BadRequest();
             try
             {
-                //SeverityProvider obj = new SeverityProvider();
-
                 var response = obj.SeverityResponse(req);
                 if (response == null)
                     return BadRequest("You must have missed some data");
-
-
                 return Ok(response);
             }
             catch(Exception e)

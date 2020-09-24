@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 
 namespace AuthorizationService.Provider
 {
-    public class AuthProvider
+    public class AuthProvider:IAuthProvider
     {
-        private readonly ICredentials obj;
-        public AuthProvider(ICredentials _obj)
+        private readonly ICredentialsRepo obj;
+        public AuthProvider(ICredentialsRepo _obj)
         {
             obj = _obj;
         }

@@ -28,8 +28,7 @@ namespace AuditBenchmarkModule.Controllers
             List<AuditBenchmark> ls = new List<AuditBenchmark>();
             _log4net.Info(" Http GET request");
             try
-            {
-                //BenchmarkProvider obj = new BenchmarkProvider();
+            {                
                 ls= obj.GetBenchmark();
                 if (ls == null)
                     return BadRequest();

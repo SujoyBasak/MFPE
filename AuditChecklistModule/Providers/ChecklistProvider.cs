@@ -7,27 +7,26 @@ using System.Threading.Tasks;
 
 namespace AuditChecklistModule.Providers
 {
-    public class ChecklistProvider
+    public class ChecklistProvider:IChecklistProvider
     {
         private readonly IChecklistRepo obj;
         public ChecklistProvider(IChecklistRepo _obj)
         {
             obj = _obj;
         }
-        //Checklist obj = new Checklist();
+        List<Questions> list = new List<Questions>();
 
-       /// <summary>
-       /// 
-       /// </summary>
-       /// <param name="type"></param>
-       /// <returns></returns>
-        public List<Questions> QuestionsProvider(string type)
+        public dynamic QuestionsProvider(string type)
         {
             if (string.IsNullOrEmpty(type))
                 return null;
+
+            else if (!type.Contains("Internal") && !type.Contains("SOX"))
+                return null;
+            
             try
             {
-                var list = obj.GetQuestions(type);
+                list = obj.GetQuestions(type);
                 return list;
             }
             catch(Exception)

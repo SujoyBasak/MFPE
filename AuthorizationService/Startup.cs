@@ -32,8 +32,8 @@ namespace AuthorizationService
         {
             services.AddControllers();
             services.AddSwaggerGen();
-            services.AddScoped<AuthProvider>();
-            services.AddScoped<ICredentials, Credentials>();
+            services.AddScoped<IAuthProvider,AuthProvider>();
+            services.AddScoped<ICredentialsRepo, CredentialsRepo>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>

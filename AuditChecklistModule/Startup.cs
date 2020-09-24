@@ -32,7 +32,7 @@ namespace AuditChecklistModule
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<ChecklistProvider>();
+            services.AddScoped<IChecklistProvider, ChecklistProvider>();
             services.AddScoped<IChecklistRepo, ChecklistRepo>();
             services.AddSwaggerGen(c =>
             {

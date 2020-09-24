@@ -1,0 +1,35 @@
+﻿@model AuditManagementPortal.Models.AuditResponse
+
+@{
+    ViewData["Title"] = "AuditResponseView";
+}
+
+
+<div>
+    <h4>AuditResponse</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-5">
+            @Html.DisplayNameFor(model => model.AuditId)
+        </dt>
+        <dd class = "col-sm-5">
+            @Html.DisplayFor(model => model.AuditId)
+        </dd>
+        <dt class = "col-sm-5">
+            @Html.DisplayNameFor(model => model.ProjectExexutionStatus)
+        </dt>
+        <dd class = "col-sm-5">
+            @Html.DisplayFor(model => model.ProjectExexutionStatus)
+        </dd>
+        <dt class = "col-sm-5">
+            @Html.DisplayNameFor(model => model.RemedialActionDuration)
+        </dt>
+        <dd class = "col-sm-5">
+            @Html.DisplayFor(model => model.RemedialActionDuration)
+        </dd>
+    </dl>
+</div>
+<div>
+    
+    <a asp-action="Home">Back to List</a>
+</div>

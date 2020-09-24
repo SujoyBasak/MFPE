@@ -26,14 +26,12 @@ namespace AuthorizationService.Controllers
     {
         private static readonly log4net.ILog _log4net = log4net.LogManager.GetLogger(typeof(TokenController));
         private IConfiguration config;
-        private readonly AuthProvider ap;
-        public TokenController(IConfiguration config,AuthProvider ap)
+        private readonly IAuthProvider ap;
+        public TokenController(IConfiguration config,IAuthProvider ap)
         {
             this.config = config;
             this.ap = ap;
-        }
-
-        //AuthProvider ap = new AuthProvider();        
+        }       
 
         [HttpPost]
         public IActionResult Login([FromBody] Authenticate login)

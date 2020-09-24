@@ -34,7 +34,7 @@ namespace AuditSeverityModule
             services.AddControllers();
             services.AddSwaggerGen();
             services.AddScoped<ISeverityRepo, SeverityRepo>();
-            services.AddScoped<SeverityProvider>();
+            services.AddScoped<ISeverityProvider,SeverityProvider>();
             services.AddScoped<AuditResponse>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

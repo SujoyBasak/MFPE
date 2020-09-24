@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AuditSeverityModule.Providers
 {
-    public class SeverityProvider
+    public class SeverityProvider : ISeverityProvider
     {
         ISeverityRepo obj;
         public SeverityProvider(ISeverityRepo _obj)
