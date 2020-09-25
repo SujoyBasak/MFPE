@@ -62,11 +62,9 @@ namespace AuthorizationService.Provider
             }
             try
             {
-                Authenticate user = null;
+                Authenticate user = null;                
 
-                //Credentials obj = new Credentials();
-
-                var ValidUsersDictionary = obj.GetCredentials();
+                Dictionary<string,string> ValidUsersDictionary = obj.GetCredentials();
 
                 if (ValidUsersDictionary == null)
                     return null;

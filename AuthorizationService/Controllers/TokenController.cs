@@ -44,7 +44,7 @@ namespace AuthorizationService.Controllers
             try
             {
                 IActionResult response = Unauthorized();
-                var user = ap.AuthenticateUser(login);
+                Authenticate user = ap.AuthenticateUser(login);
 
                 if (user != null)
                 {

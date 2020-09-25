@@ -39,7 +39,7 @@ namespace AuditSeverityModule.Controllers
             {
                 var response = obj.SeverityResponse(req);
                 if (response == null)
-                    return BadRequest("You must have missed some data");
+                    return BadRequest("Check Your Data");
                 return Ok(response);
             }
             catch(Exception e)
