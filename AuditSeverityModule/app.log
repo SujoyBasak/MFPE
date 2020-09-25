@@ -153,3 +153,26 @@ INFO  05:02:33 Content root path: C:\Users\Sujoy Basak\source\repos\MFPE\Microse
 INFO  05:02:44  Http POST request from AuditSeverity
 INFO  05:02:53  Http POST request from AuditSeverity
 INFO  05:03:15  Http POST request from AuditSeverity
+INFO  08:03:05 Application started. Press Ctrl+C to shut down.
+INFO  08:03:05 Application started. Press Ctrl+C to shut down.
+INFO  08:03:05 Hosting environment: Development
+INFO  08:03:05 Hosting environment: Development
+INFO  08:03:05 Content root path: C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule
+INFO  08:03:05 Content root path: C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule
+INFO  08:20:13  Http POST request from AuditSeverity
+INFO  08:20:32  Http POST request from AuditSeverity
+INFO  08:21:02  Http POST request from AuditSeverity
+INFO  08:21:14  Http POST request from AuditSeverity
+INFO  08:21:24  Http POST request from AuditSeverity
+INFO  08:30:42  Http POST request from AuditSeverity
+INFO  08:31:16  Http POST request from AuditSeverity
+INFO  11:02:51 Application started. Press Ctrl+C to shut down.
+INFO  11:02:51 Application started. Press Ctrl+C to shut down.
+INFO  11:02:51 Hosting environment: Development
+INFO  11:02:51 Hosting environment: Development
+INFO  11:02:51 Content root path: C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule
+INFO  11:02:51 Content root path: C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuditSeverityModule
+INFO  11:04:04  Http POST request from AuditSeverity
+INFO  11:04:16  Http POST request from AuditSeverity
+INFO  11:04:24  Http POST request from AuditSeverity
+INFO  11:04:30  Http POST request from AuditSeverity

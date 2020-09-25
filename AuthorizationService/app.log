@@ -350,3 +350,29 @@ INFO  04:56:29 Hosting environment: Development
 INFO  04:56:29 Content root path: C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuthorizationService
 INFO  04:56:29 Content root path: C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuthorizationService
 INFO  04:56:48  Http Post request
+INFO  06:56:38 Application started. Press Ctrl+C to shut down.
+INFO  06:56:38 Application started. Press Ctrl+C to shut down.
+INFO  06:56:38 Hosting environment: Development
+INFO  06:56:38 Hosting environment: Development
+INFO  06:56:38 Content root path: C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuthorizationService
+INFO  06:56:38 Content root path: C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuthorizationService
+INFO  07:02:29  Http Post request
+INFO  07:04:27  Http Post request
+INFO  07:05:41  Http Post request
+INFO  07:12:39  Http Post request
+INFO  07:14:09  Http Post request
+INFO  07:17:11  Http Post request
+INFO  07:18:12  Http Post request
+INFO  08:00:54 Application started. Press Ctrl+C to shut down.
+INFO  08:00:54 Application started. Press Ctrl+C to shut down.
+INFO  08:00:54 Hosting environment: Development
+INFO  08:00:54 Hosting environment: Development
+INFO  08:00:54 Content root path: C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuthorizationService
+INFO  08:00:54 Content root path: C:\Users\Sujoy Basak\source\repos\MFPE\Microservices\AuthorizationService
+INFO  08:06:16  Http Post request
+INFO  08:07:40  Http Post request
+INFO  08:07:56  Http Post request
+INFO  08:08:11  Http Post request
+INFO  08:08:25  Http Post request
+INFO  08:27:57  Http Post request
+INFO  08:31:40  Http Post request

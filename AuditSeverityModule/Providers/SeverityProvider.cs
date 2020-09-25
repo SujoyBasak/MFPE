@@ -47,28 +47,30 @@ namespace AuditSeverityModule.Providers
                 else
                     return null;
 
+                Random r = new Random();
+
                 AuditResponse res = new AuditResponse();
                 if (Req.Auditdetails.Type == "Internal" && count <= acceptableNo)
                 {
-                    res.AuditId = 1;
+                    res.AuditId = r.Next();
                     res.ProjectExexutionStatus = "GREEN";
                     res.RemedialActionDuration = "No Action Needed";
                 }
                 else if (Req.Auditdetails.Type == "Internal" && count > acceptableNo)
                 {
-                    res.AuditId = 1;
+                    res.AuditId = r.Next();
                     res.ProjectExexutionStatus = "RED";
                     res.RemedialActionDuration = "Action to be taken in 2 weeks";
                 }
                 else if (Req.Auditdetails.Type == "SOX" && count <= acceptableNo)
                 {
-                    res.AuditId = 1;
+                    res.AuditId = r.Next();
                     res.ProjectExexutionStatus = "GREEN";
                     res.RemedialActionDuration = "No Action Needed";
                 }
                 else if (Req.Auditdetails.Type == "SOX" && count > acceptableNo)
                 {
-                    res.AuditId = 1;
+                    res.AuditId = r.Next();
                     res.ProjectExexutionStatus = "RED";
                     res.RemedialActionDuration = "Action to be taken in 2 weeks";
                 }
